@@ -7,8 +7,11 @@
 [![total](http://cranlogs.r-pkg.org/badges/grand-total/iRegression)](https://CRAN.R-project.org/package=iRegression)
 [![month](https://cranlogs.r-pkg.org/badges/iRegression)](https://CRAN.R-project.org/package=iRegression)
 
-Contains some important regression methods for interval-valued variables. For each method, it is available the fitted values, residuals and some goodness-of-fit measures.
+Contains some important regression methods for interval-valued variables. For each method, it is available the fitted values, residuals and some goodness-of-fit measures. <br><br><br>
 
+### Installation
+
+`install.packages("iRegression")` <br><br><br>
 
 **A package manual may be found at**: https://cran.r-project.org/web/packages/iRegression/iRegression.pdf. The versions of the **iRegression** package are separated by tags.
 
