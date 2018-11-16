@@ -1,7 +1,7 @@
 \name{coef.crm}
 \alias{coef.crm}
 \alias{coefficients.crm}
-\title{Extract Centre and Range Method Coefficients}
+\title{Extract the Coefficients for the Centre and Range Method}
 \description{Returns the coefficients from an object class \code{crm}. }
 \usage{
 \method{coef}{crm}(object, ...)

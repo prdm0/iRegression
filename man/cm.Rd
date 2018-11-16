@@ -30,10 +30,10 @@ vector of parameters \bold{\emph{beta}}.
 	\item{coefficients}{ a named vector of coefficients. }
 	\item{sigma}{ an estimate of standard deviation.}
 	\item{df}{ the residual degrees of freedom. }
-	\item{fitted.values.l}{ the fitted mean values for the lower interval bound. }
-	\item{fitted.valuues.u}{ the fitted mean values for the upper interval bound.}
-	\item{residuals.l}{ the residuals for the lower interval bound (that is response minus fitted values).}
-	\item{residuals.u}{ the residuals for the upper interval bound (that is response minus fitted values). }
+	\item{fitted.values.l}{ the fitted values for the lower interval bound. }
+	\item{fitted.valuues.u}{ the fitted values for the upper interval bound.}
+	\item{residuals.l}{ the ordinary residuals for the lower interval bound .}
+	\item{residuals.u}{ the ordinary residuals for the upper interval bound . }
 }	
 \references{
 

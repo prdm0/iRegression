@@ -11,12 +11,12 @@
 \format{
 A data frame containing following variables:
 \describe{
-  \item{PulseMin}{ Minimum of the response variable Pulse}
-  \item{SystMin}{ Minimum of the explanatory variable Systolic Pressure}
-  \item{DiastMin}{ Minimum of the explanatory variable Diastolic Pressure}
-  \item{PulseMax}{  Maximum of the response variable Pulse}
-  \item{SystMax}{ Maximum of the explanatory variable Systolic Pressure}
-  \item{DiastMax}{ Maximum of the explanatory variable Diastolic Pressure}
+  \item{PulseMin}{ Lower bound of the response interval-valued variable Pulse}
+  \item{SystMin}{ Lower bound of the explanatory interval-valued variable Systolic Pressure}
+  \item{DiastMin}{ Lower bound of the explanatory interval-valued variable Diastolic Pressure}
+  \item{PulseMax}{  Upper bound of the response interval-valued variable Pulse}
+  \item{SystMax}{ Upper bound of the explanatory interval-valued variable Systolic Pressure}
+  \item{DiastMax}{ Upper bound of the explanatory interval-valued variable Diastolic Pressure}
 }
 }
 

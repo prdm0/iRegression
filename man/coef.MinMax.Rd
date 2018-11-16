@@ -1,7 +1,7 @@
 \name{coef.MinMax}
 \alias{coef.MinMax}
 \alias{coefficients.MinMax}
-\title{Extract MinMax Method Coefficients}
+\title{Extract Coefficients for the MinMax Method}
 \description{Returns the coefficients from an object class \code{MinMax}.}
 \usage{
 \method{coef}{MinMax}(object, ...)

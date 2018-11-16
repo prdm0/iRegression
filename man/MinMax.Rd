@@ -27,16 +27,16 @@ error of the upper bounds.
 
 \value{
 	\code{MinMax} returns an object of class "\code{MinMax}" including at least the following elements:
-	\item{coefficients.l}{ a named vector of coefficients for the Min variables. }
-	\item{coefficients.u}{ a named vector of coefficients for the Max variables. }
-	\item{sigma.l}{ an estimate of standard deviation for the Min response variable}
-	\item{sigma.u}{ an estimate of standard deviation for the Max response variable}
+	\item{coefficients.l}{ a named vector of coefficients for the Minimum explanatory variables. }
+	\item{coefficients.u}{ a named vector of coefficients for the Maximum explanatory variables. }
+	\item{sigma.l}{ an estimate of standard deviation for the Minimum response variable}
+	\item{sigma.u}{ an estimate of standard deviation for the Maximum response variable}
 	\item{df.l}{ the degrees of freedom for the lower residuals}
 	\item{df.u}{ the degrees of freedom for the upper residuals}
-	\item{fitted.values.l}{ the fitted mean values for the lower interval bound. }
-	\item{fitted.values.u}{ the fitted mean values for the upper interval bound.}
-	\item{residuals.l}{ the residuals for the lower interval bound (that is response minus fitted values).}
-	\item{residuals.u}{ the residuals for the upper interval bound (that is response minus fitted values).}
+	\item{fitted.values.l}{ the fitted values for the lower interval bound. }
+	\item{fitted.values.u}{ the fitted values for the upper interval bound.}
+	\item{residuals.l}{ the ordinary residuals for the lower interval bound.}
+	\item{residuals.u}{ the ordinary residuals for the upper interval bound.}
 }
 
 \references{

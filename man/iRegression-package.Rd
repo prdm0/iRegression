@@ -3,25 +3,25 @@
 \alias{iRegression}
 
 \docType{package}
-\title{ iRegression Package }
+\title{ Regression methods for interval-valued variables }
 \description{
 
-The \code{iRegression} package is used to fit regression methods for symbolic interval-valued variables. At this time, the package provide the
-following linear methods: Centre Method (Billard and Diday, 2000), MinMax Method and Centre and Range Method (Lima Neto and De Carvalho, 2008).
+This package contains some important regression methods for interval-valued variables.
+For each method, it is available the fitted values, residuals and some goodness-of-fit measures.
 
 }
 \details{
 \tabular{ll}{
 Package: \tab iRegression\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 1.1\cr
 Date: \tab 2011-06-01\cr
 License: \tab GPL (>= 2) \cr
 LazyLoad: \tab yes\cr
 }
 
 Some available functions: 
-\code{\link{cm}}, \code{\link{MinMax}}, \code{\link{crm}}}
+\code{\link{cm}}, \code{\link{MinMax}}, \code{\link{crm}}, \code{\link{ccrm}}, \code{\link{bivar}}}
 
 \author{
 Eufrasio de A. Lima Neto \email{eufrasio@de.ufpb.br} and Claudio A. V. de Souza Filho \email{cldsza@gmail.com}
@@ -39,5 +39,11 @@ Federation of Classification Societies}, Springer-Verlag, pp. 369-374.
 
 Lima Neto, E.A. and De Carvalho, F.A.T. (2008). Centre and range method to fitting a linear regression model on
 symbolic interval data. \emph{Computational Statistics and Data Analysis}, \bold{52}, 1500--1515.
+
+Lima Neto, E.A. and De Carvalho, F.A.T. (2010). Constrained linear regression models for
+symbolic interval-valued variables. \emph{Computational Statistics and Data Analysis}, 54, 333--347.
+
+Lima Neto, E. A., Cordeiro, G. and De Carvalho, F.A.T. (2011). Bivariate symbolic regression models for 
+interval-valued variables. \emph{Journal of Statistical Computation and Simulation (Print)}, 81, 1727--1744.
 
 }
