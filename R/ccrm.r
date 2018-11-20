@@ -12,7 +12,7 @@ ccrm.default <- function(formula1, formula2, data, ...) {
 		Met4 <- list(y=y.R, w=rep(1,length(y.R)), X=x.R, C=matrix(0,0,0),
         		p=rep(1, ncol(x.R)), off=array(0,0), S=list(),sp=array(0,0),
          		Ain=diag(ncol(x.R)), bin=rep(0, ncol(x.R)))
-		require("mgcv")
+		
 		Beta4 <- pcls(Met4)
 		
 		coef.R <- Beta4
