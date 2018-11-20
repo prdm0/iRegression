@@ -16,9 +16,9 @@ modm <- function(xmin, xup, ymin, yup){
   gamma <- (Bmax + Bmin)/2; delta <- (Bmax - Bmin)/2
 
   Ymin_est <- alpha * x_center + beta * x_range - (gamma - delta)
-  Xmin_est <- alpha * x_center + beta * x_range + (gamma - delta)
+  Ymax_est <- alpha * x_center + beta * x_range + (gamma - delta)
 
-  return(list(Ymin_est = Ymin_est, Xmin_est = Xmin_est, alpha = alpha,
+  return(list(Ymin_est = Ymin_est, Ymax_est = Ymax_est, alpha = alpha,
               beta = beta, Bmin = Bmin, Bmax = Bmax, gamma = gamma,
               delta = delta))
 }
