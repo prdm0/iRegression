@@ -10,8 +10,8 @@ modm <- function(xmin, xup, ymin, yup){
   alpha <- cov(x_center, y_center)/var(x_center)
   beta <- min(s0, max(0, cov(x_range, y_range)/var(x_range)))
   
-  Bmin <- (mean(mean(y_center)) - alpha*mean(x_center)) - (mean(y_range) - beta*mean(x_range))
-  Bmax <- (mean(mean(y_center)) - alpha*mean(x_center)) + (mean(y_range) - beta*mean(x_range))
+  Bmin <- (mean(y_center) - alpha*mean(x_center)) - (mean(y_range) - beta*mean(x_range))
+  Bmax <- (mean(y_center) - alpha*mean(x_center)) + (mean(y_range) - beta*mean(x_range))
   
   gamma <- mean(Bmax, Bmin); delta <- (Bmax - Bmin)/2
   
