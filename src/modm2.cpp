@@ -15,13 +15,13 @@ using namespace Rcpp;
 
 // [[Rcpp::export]]
 List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
-  arma::vec x_range = (xup - xmin)/2;
-  arma::vec y_range = (yup - ymin)/2;
+  arma::vec x_range = (xup - xmin)/2.;
+  arma::vec y_range = (yup - ymin)/2.;
 
   double s0 = min(y_range/x_range);
 
-  arma::vec x_center = (xup + xmin)/2;
-  arma::vec y_center = (yup + ymin)/2;
+  arma::vec x_center = (xup + xmin)/2.;
+  arma::vec y_center = (yup + ymin)/2.;
 
   double alpha = as_scalar(cov(x_center, y_center)/var(x_center));
 
