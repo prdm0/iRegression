@@ -2,42 +2,25 @@ cm <- function(formula1,formula2, data, ...) UseMethod("cm")
 
 cm.default <- function (formula1, formula2, data, ...)
 {
-	cmEst <- function(x1, x2, y1, y2)
-	{    
+	  cmEst <- function(x1, x2, y1, y2)
+	  {    
 	  
 	    result <- cmEst_cpp(x1 = x1, x2 = x2, y1 = y1, y2 = y2)
 	    names(result$coefficients) <- colnames(x1)
 	    colnames(result$vcov) <- colnames(x1)
 	    
 	    return(result)
-	    
-	   #xpm <- (x1+x2)/2 # Is Matrix.
-	   #xh <- x2-x1 # Is Matrix.
-	   #ypm <- (y1+y2)/2 # Is Vector.
-	   #yh <- y2-y1 # Is Vector.
-	   #qxpm <- qr(xpm) # class(qxpm$qr) Is Matrix.
-	   #coef <- solve.qr(qxpm, ypm) # Is Atomic Vector.
-	   #df <- nrow(xpm)-ncol(xpm) # Is Vector with one position.
-	   #sigma2 <- sum((ypm - xpm%*%coef)^2)/df # Is Vector with one position.
-	   #vcov <- sigma2 * chol2inv(qxpm$qr) # Is Matrix.
-	   #colnames(vcov) <- rownames(vcov) <- colnames(xpm)
-	   #list(coefficients = coef,
-	   #     vcov = vcov,
-	   #     sigma = sqrt(sigma2),
-	   #     df = df)
-	}
-    ## extract terms
-    mf1 <- model.frame(formula=formula1,data=data)
-    x1 <- model.matrix(attr(mf1, "terms"), data=mf1)
-    y1 <- model.response(mf1)
-    mf2 <- model.frame(formula=formula2,data=data)
-    x2 <- model.matrix(attr(mf2, "terms"), data=mf2)
-    y2 <- model.response(mf2)
-    ## calc
-    x1 <- as.matrix(x1)
-    x2 <- as.matrix(x2)
-    y1 <- as.numeric(y1)
-    y2 <- as.numeric(y2)
+	  }
+
+	  variables1 <- all.vars(formula1)
+	  x1 <- as.matrix(cbind(Intercept = 1,data[variables1[-1]]))
+	  y1 <- as.vector(t(data[variables1[1]]))
+	  
+	  variables2 <- all.vars(formula2)
+	  x2 <- as.matrix(cbind(Intercept = 1, data[variables2[-1]]))
+	  y2 <- as.vector(t(data[variables2[1]]))
+	  
+	  
     est <- cmEst(x1, x2, y1, y2)
     est$fitted.values.l <- as.vector(x1%*%est$coefficients)
     est$fitted.values.u <- as.vector(x2%*%est$coefficients)
