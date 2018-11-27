@@ -2,33 +2,34 @@ cm <- function(formula1,formula2, data, ...) UseMethod("cm")
 
 cm.default <- function (formula1, formula2, data, ...)
 {
-	  cmEst <- function(x1, x2, y1, y2)
-	  {    
+  cmEst <- function(x1, x2, y1, y2)
+	{    
 	  
-	    result <- cmEst_cpp(x1 = x1, x2 = x2, y1 = y1, y2 = y2)
-	    names(result$coefficients) <- colnames(x1)
-	    colnames(result$vcov) <- colnames(x1)
+	  result <- cmEst_cpp(x1 = x1, x2 = x2, y1 = y1, y2 = y2)
+	  names(result$coefficients) <- colnames(x1)
+	  colnames(result$vcov) <- colnames(x1)
 	    
-	    return(result)
-	  }
+	  return(result)
+	}
 
-	  variables1 <- all.vars(formula1)
-	  x1 <- as.matrix(cbind(Intercept = 1,data[variables1[-1]]))
-	  y1 <- as.vector(t(data[variables1[1]]))
+	variables1 <- all.vars(formula1)
+	x1 <- as.matrix(cbind(Intercept = 1,data[variables1[-1]]))
+	y1 <- as.vector(t(data[variables1[1]]))
 	  
-	  variables2 <- all.vars(formula2)
-	  x2 <- as.matrix(cbind(Intercept = 1, data[variables2[-1]]))
-	  y2 <- as.vector(t(data[variables2[1]]))
+	variables2 <- all.vars(formula2)
+	x2 <- as.matrix(cbind(Intercept = 1, data[variables2[-1]]))
+	y2 <- as.vector(t(data[variables2[1]]))
 	  
 	  
-    est <- cmEst(x1, x2, y1, y2)
-    est$fitted.values.l <- as.vector(x1%*%est$coefficients)
-    est$fitted.values.u <- as.vector(x2%*%est$coefficients)
-    est$residuals.l <- y1 - est$fitted.values.l
-    est$residuals.u <- y2 - est$fitted.values.u
-    est$call <- match.call()
-    class(est) <- "cm"
-    est
+  est <- cmEst(x1, x2, y1, y2)
+  est$fitted.values.l <- as.vector(x1%*%est$coefficients)
+  est$fitted.values.u <- as.vector(x2%*%est$coefficients)
+  est$residuals.l <- y1 - est$fitted.values.l
+  est$residuals.u <- y2 - est$fitted.values.u
+  est$call <- match.call()
+  class(est) <- "cm"
+  
+  return(est)
 }
 
 print.cm <- function(x, ...)
