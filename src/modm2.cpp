@@ -39,13 +39,13 @@ List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
   arma::vec Ymin_est = alpha * x_center + beta * x_range - (gamma - delta);
   arma::vec Ymax_est = alpha * x_center + beta * x_range + (gamma - delta);
 
-  return List::create(Named("Ymin_est") = Ymin_est.t(),
-                      Named("Ymax_est") = Ymax_est.t(),
-                      Named("alpha") = alpha,
-                      Named("beta") = beta,
-                      Named("Bmin") = Bmin,
-                      Named("Bmax") = Bmax,
-                      Named("gamma") = gamma,
-                      Named("delta") = delta);
+  return List::create(_["Ymin_est"] = Ymin_est.t(),
+                      _["Ymax_est"] = Ymax_est.t(),
+                      _["alpha"] = alpha,
+                      _["beta"] = beta,
+                      _["Bmin"] = Bmin,
+                      _["Bmax"] = Bmax,
+                      _["gamma"] = gamma,
+                      _["delta"] = delta);
 }
 
