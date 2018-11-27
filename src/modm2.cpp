@@ -30,8 +30,8 @@ List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
   if(beta < 0.) beta = 0.;
   if(beta < s0) beta = beta;
 
-  double Bmin = (mean(y_center) - alpha*mean(x_center)) - (mean(y_range) - beta*mean(x_range));
-  double Bmax = (mean(y_center) - alpha*mean(x_center)) + (mean(y_range) - beta*mean(x_range));
+  double Bmin = (mean(y_center) - alpha * mean(x_center)) - (mean(y_range) - beta * mean(x_range));
+  double Bmax = (mean(y_center) - alpha * mean(x_center)) + (mean(y_range) - beta * mean(x_range));
 
   double gamma = (Bmax + Bmin)/2.;
   double delta = (Bmax - Bmin)/2.;
@@ -40,12 +40,12 @@ List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
   arma::vec Ymax_est = alpha * x_center + beta * x_range + (gamma - delta);
 
   return List::create(Named("Ymin_est") = Ymin_est.t(),
-                        Named("Ymax_est") = Ymax_est.t(),
-                        Named("alpha") = alpha,
-                        Named("beta") = beta,
-                        Named("Bmin") = Bmin,
-                        Named("Bmax") = Bmax,
-                        Named("gamma") = gamma,
-                        Named("delta") = delta);
+                      Named("Ymax_est") = Ymax_est.t(),
+                      Named("alpha") = alpha,
+                      Named("beta") = beta,
+                      Named("Bmin") = Bmin,
+                      Named("Bmax") = Bmax,
+                      Named("gamma") = gamma,
+                      Named("delta") = delta);
 }
 

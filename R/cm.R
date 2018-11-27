@@ -1,23 +1,30 @@
 cm <- function(formula1,formula2, data, ...) UseMethod("cm")
 
-cm.default <- function (formula1, formula2, data,...)
+cm.default <- function (formula1, formula2, data, ...)
 {
 	cmEst <- function(x1, x2, y1, y2)
 	{    
-	    xpm <- (x1+x2)/2
-	    xh <- x2-x1
-	    ypm <- (y1+y2)/2
-	    yh <- y2-y1
-	    qxpm <- qr(xpm)
-	    coef <- solve.qr(qxpm, ypm)
-	    df <- nrow(xpm)-ncol(xpm)
-	    sigma2 <- sum((ypm - xpm%*%coef)^2)/df
-	    vcov <- sigma2 * chol2inv(qxpm$qr)
-	    colnames(vcov) <- rownames(vcov) <- colnames(xpm)
-	    list(coefficients = coef,
-	        vcov = vcov,
-	        sigma = sqrt(sigma2),
-	        df = df)
+	  
+	    result <- cmEst_cpp(x1 = x1, x2 = x2, y1 = y1, y2 = y2)
+	    names(result$coefficients) <- colnames(x1)
+	    colnames(result$vcov) <- colnames(x1)
+	    
+	    return(result)
+	    
+	   #xpm <- (x1+x2)/2 # Is Matrix.
+	   #xh <- x2-x1 # Is Matrix.
+	   #ypm <- (y1+y2)/2 # Is Vector.
+	   #yh <- y2-y1 # Is Vector.
+	   #qxpm <- qr(xpm) # class(qxpm$qr) Is Matrix.
+	   #coef <- solve.qr(qxpm, ypm) # Is Atomic Vector.
+	   #df <- nrow(xpm)-ncol(xpm) # Is Vector with one position.
+	   #sigma2 <- sum((ypm - xpm%*%coef)^2)/df # Is Vector with one position.
+	   #vcov <- sigma2 * chol2inv(qxpm$qr) # Is Matrix.
+	   #colnames(vcov) <- rownames(vcov) <- colnames(xpm)
+	   #list(coefficients = coef,
+	   #     vcov = vcov,
+	   #     sigma = sqrt(sigma2),
+	   #     df = df)
 	}
     ## extract terms
     mf1 <- model.frame(formula=formula1,data=data)

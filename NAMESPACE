@@ -1,6 +1,9 @@
 # Default NAMESPACE created by R
 # Remove the previous line if you edit this file
 
+useDynLib(iRegression, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+
 export(bivar) 
 export(ccrm)
 export(cm)
@@ -104,8 +107,7 @@ S3method(coef,MinMax)
 import(mgcv)
 importFrom("stats", "coef", "cor", "lm", "model.frame", "model.matrix", "model.response", "as.formula", "cov", "var")
 
-# Export all names
-exportPattern(".")
 
-useDynLib(iRegression)
-importFrom(Rcpp, sourceCpp)
+
+
+
