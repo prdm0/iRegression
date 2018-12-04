@@ -7,6 +7,7 @@ importFrom(Rcpp, evalCpp)
 export(bivar) 
 export(ccrm)
 export(cm)
+export(cm.formula) 
 export(crm)
 export(MinMax)
 export(MinMax.default) 
@@ -16,7 +17,6 @@ export(bivar.formula)
 export(ccrm.default)
 export(ccrm.formula) 
 export(cm.default)
-export(cm.formula)
 export(coef.MinMax) 
 export(coef.bivar)
 export(coef.ccrm)
@@ -53,7 +53,6 @@ export(summary.ccrm)
 export(summary.cm)
 export(summary.crm)
 export(modm)
-export(modm2)
 
 S3method(bivar,default)		 
 S3method(bivar,formula)
@@ -75,7 +74,7 @@ S3method(fitted,ccrm)
 S3method(residuals,ccrm)
 S3method(coef,ccrm)
 
-S3method(cm,default)		 
+S3method(cm,default)
 S3method(cm,formula)
 S3method(print,cm)
 S3method(summary,cm)
@@ -106,8 +105,6 @@ S3method(coef,MinMax)
 # Import all packages listed as Imports or Depends
 import(mgcv)
 importFrom("stats", "coef", "cor", "lm", "model.frame", "model.matrix", "model.response", "as.formula", "cov", "var")
-
-
 
 
 

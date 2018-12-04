@@ -23,7 +23,7 @@ the interval value of the dependent variable.
 The Centre Method is based on the minimization of the midpoint
 error. The lower and upper bounds of the dependent variable are predicted, respectively,
 from the lower and upper bounds of the independent variable using the same
-vector of parameters \bold{\emph{beta}}.
+vector of parameters \strong{\eqn{latex}{\beta}}.
 }
 \value{
 	\code{cm} returns an object of class "\code{cm}" including at least the following elements:
@@ -45,7 +45,7 @@ Lima Neto, E.A. and De Carvalho, F.A.T. (2008). Centre and range method to fitti
 symbolic interval data. \emph{Computational Statistics and Data Analysis}, \bold{52}, 1500--1515.
 
 }
-\author{Eufrasio de A. Lima Neto \email{eufrasio@de.ufpb.br} and Claudio A. V. de Souza Filho \email{cldsza@gmail.com}}
+\author{Eufrasio de A. Lima Neto \email{eufrasio@de.ufpb.br}, Pedro Rafael D. Marinho \email{pedro.rafael.marinho@gmail.com} and Claudio A. V. de Souza Filho \email{cldsza@gmail.com}.}
 
 \note{
 \code{formula1} must contain the lower limit of the symbolic interval-valued variables. \code{formula2} contain the upper limit

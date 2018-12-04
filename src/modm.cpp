@@ -14,7 +14,7 @@ using namespace Rcpp;
 // [[Rcpp::depends(RcppArmadillo)]]
 
 // [[Rcpp::export]]
-List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
+List modm(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
   arma::vec x_range = (xup - xmin)/2.;
   arma::vec y_range = (yup - ymin)/2.;
 

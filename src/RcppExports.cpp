@@ -7,22 +7,21 @@
 using namespace Rcpp;
 
 // cmEst_cpp
-List cmEst_cpp(arma::mat x1, arma::mat x2, arma::vec y1, arma::vec y2);
-RcppExport SEXP _iRegression_cmEst_cpp(SEXP x1SEXP, SEXP x2SEXP, SEXP y1SEXP, SEXP y2SEXP) {
+Rcpp::List cmEst_cpp(StringVector string_formula1, StringVector string_formula2, DataFrame data);
+RcppExport SEXP _iRegression_cmEst_cpp(SEXP string_formula1SEXP, SEXP string_formula2SEXP, SEXP dataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type x1(x1SEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type x2(x2SEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type y1(y1SEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type y2(y2SEXP);
-    rcpp_result_gen = Rcpp::wrap(cmEst_cpp(x1, x2, y1, y2));
+    Rcpp::traits::input_parameter< StringVector >::type string_formula1(string_formula1SEXP);
+    Rcpp::traits::input_parameter< StringVector >::type string_formula2(string_formula2SEXP);
+    Rcpp::traits::input_parameter< DataFrame >::type data(dataSEXP);
+    rcpp_result_gen = Rcpp::wrap(cmEst_cpp(string_formula1, string_formula2, data));
     return rcpp_result_gen;
 END_RCPP
 }
-// modm2
-List modm2(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup);
-RcppExport SEXP _iRegression_modm2(SEXP xminSEXP, SEXP xupSEXP, SEXP yminSEXP, SEXP yupSEXP) {
+// modm
+List modm(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup);
+RcppExport SEXP _iRegression_modm(SEXP xminSEXP, SEXP xupSEXP, SEXP yminSEXP, SEXP yupSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -30,14 +29,14 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::vec >::type xup(xupSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type ymin(yminSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type yup(yupSEXP);
-    rcpp_result_gen = Rcpp::wrap(modm2(xmin, xup, ymin, yup));
+    rcpp_result_gen = Rcpp::wrap(modm(xmin, xup, ymin, yup));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_iRegression_cmEst_cpp", (DL_FUNC) &_iRegression_cmEst_cpp, 4},
-    {"_iRegression_modm2", (DL_FUNC) &_iRegression_modm2, 4},
+    {"_iRegression_cmEst_cpp", (DL_FUNC) &_iRegression_cmEst_cpp, 3},
+    {"_iRegression_modm", (DL_FUNC) &_iRegression_modm, 4},
     {NULL, NULL, 0}
 };
 
