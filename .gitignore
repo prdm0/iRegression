@@ -37,5 +37,5 @@ rsconnect/
 .Rproj.user
 
 # Objects files
-.o
-.so
+*.o
+*.so
