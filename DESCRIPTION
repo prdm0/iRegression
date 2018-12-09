@@ -11,7 +11,7 @@ Description: This package contains some important regression methods
         for interval-valued variables. For each method, it is available
         the fitted values, residuals and some goodness-of-fit measures.
 License: GPL (>= 2)
-URL: https://github.com/PedroRafaelDinizMarinho/iRegression
+URL: https://pedrorafaeldinizmarinho.github.io/iRegression/index.html, https://github.com/PedroRafaelDinizMarinho/iRegression
 BugReports: https://github.com/PedroRafaelDinizMarinho/iRegression/issues
 Imports: Rcpp
 LinkingTo: Rcpp, RcppArmadillo
