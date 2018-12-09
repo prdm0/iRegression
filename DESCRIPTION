@@ -4,7 +4,7 @@ Title: Regression methods for interval-valued variables
 Version: 2.0
 Date: 2011-06-01
 Depends: mgcv
-Author: Eufrasio de A. Lima Neto with contribution from Pedro Rafael D. Marinho and Claudio A.
+Author: Eufrasio de A. Lima Neto, Pedro Rafael D. Marinho with contribution from Claudio A.
         Vasconcelos
 Maintainer: Eufrasio de A. Lima Neto <eufrasio@de.ufpb.br> and Pedro Rafael D. Marinho <pedro.rafael.marinho@gmail.com>
 Description: This package contains some important regression methods
@@ -15,3 +15,4 @@ URL: https://github.com/PedroRafaelDinizMarinho/iRegression
 BugReports: https://github.com/PedroRafaelDinizMarinho/iRegression/issues
 Imports: Rcpp
 LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.1
