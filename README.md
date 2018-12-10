@@ -4,7 +4,7 @@
 
 [![last](https://www.r-pkg.org/badges/last-release/iRegression)](https://CRAN.R-project.org/package=iRegression)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/iRegression)](https://CRAN.R-project.org/package=iRegression)
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-green.svg)](https://www.gnu.org/licenses/gpl-2.0)
+[![license](https://img.shields.io/cran/l/devtools.svg)](https://www.gnu.org/licenses/gpl-2.0)
 [![total](http://cranlogs.r-pkg.org/badges/grand-total/iRegression)](https://CRAN.R-project.org/package=iRegression)
 [![month](https://cranlogs.r-pkg.org/badges/iRegression)](https://CRAN.R-project.org/package=iRegression)
 
