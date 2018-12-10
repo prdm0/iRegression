@@ -3,6 +3,7 @@
 
 useDynLib(iRegression, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
+importFrom(mgcv, pcls)
 
 export(bivar) 
 export(ccrm)
@@ -103,7 +104,7 @@ S3method(residuals,MinMax)
 S3method(coef,MinMax)
 
 # Import all packages listed as Imports or Depends
-import(mgcv)
+
 importFrom("stats", "coef", "cor", "lm", "model.frame", "model.matrix", "model.response", "as.formula", "cov", "var")
 
 
