@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Centre Method — cm • iRegression</title>
+<title>Centre Method — icm • iRegression</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Centre Method — cm" />
+<meta property="og:title" content="Centre Method — icm" />
 
-<meta property="og:description" content="cm is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000)." />
+<meta property="og:description" content="icm is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -106,11 +106,11 @@
 
     <div class="ref-description">
     
-    <p><code>cm</code> is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000).</p>
+    <p><code>icm</code> is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000).</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>cm</span>(<span class='no'>formula1</span>, <span class='no'>formula2</span>, <span class='no'>data</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>icm</span>(<span class='no'>formula1</span>, <span class='no'>formula2</span>, <span class='no'>data</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -148,7 +148,7 @@ vector of parameters <strong>\(latex\)</strong>.</p>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>cm</code> returns an object of class "<code>cm</code>" including at least the following elements:</p>
+    <p><code>icm</code> returns an object of class "<code>icm</code>" including at least the following elements:</p>
 <dt>coefficients</dt><dd><p>a named vector of coefficients.</p></dd>
 	<dt>sigma</dt><dd><p>an estimate of standard deviation.</p></dd>
 	<dt>df</dt><dd><p>the residual degrees of freedom.</p></dd>
@@ -174,19 +174,19 @@ of the symbolic interval-valued variables.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='summary.cm.html'>summary.cm</a></code>, <code><a href='https://www.rdocumentation.org/packages/stats/topics/coef'>coef</a></code>, <code><a href='fitted.cm.html'>fitted.cm</a></code>, <code><a href='residuals.cm.html'>residuals.cm</a></code>, <code><a href='https://www.rdocumentation.org/packages/stats/topics/formula'>formula</a></code></p></div>
+    <div class='dont-index'><p><code><a href='summary.cm.html'>summary.icm</a></code>, <code><a href='https://www.rdocumentation.org/packages/stats/topics/coef'>coef</a></code>, <code><a href='fitted.cm.html'>fitted.icm</a></code>, <code><a href='residuals.cm.html'>residuals.icm</a></code>, <code><a href='https://www.rdocumentation.org/packages/stats/topics/formula'>formula</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='st'>"Cardiological.MinMax"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"iRegression"</span>) <span class='co'>## see Billard and Diday (2000)</span>
-<span class='no'>ex.cm</span> <span class='kw'>&lt;-</span> <span class='fu'>cm</span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
-<span class='no'>ex.cm</span></div><div class='output co'>#&gt; Call:
-#&gt; cm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
+<span class='no'>ex.icm</span> <span class='kw'>&lt;-</span> <span class='fu'>icm</span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
+<span class='no'>ex.icm</span></div><div class='output co'>#&gt; Call:
+#&gt; icm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
 #&gt;     SystMax + DiastMax, data = Cardiological.MinMax)
 #&gt; 
 #&gt; $coefficients
-#&gt;       &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt; 
-#&gt; 21.1708061  0.3288879  0.1698512 
+#&gt; (Intercept)      beta_1      beta_2 
+#&gt;  21.1708061   0.3288879   0.1698512 
 #&gt; 
 #&gt; $sigma
 #&gt; [1] 9.516986

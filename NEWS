@@ -1,0 +1,8 @@
+CHANGES IN VERSION 2.0.0
+
+=> The "cm" function is now called icm to correct incompatibility with the "cm" function of the package grDevices;
+=> In order to maintain uniformity in the functions nomenclatures, the letter "i" was added in the name of the other functions: "ibivar", "icm", "icrm", etc;
+=> The "icm" function uses an auxiliary "cmEst_cpp" function written in C++ using RcppArmadillo.h defined in the cmEst_aux.cpp file;
+=> Added the "modm" function that implements the Model M;
+=> The directory inst / containing the site of the package;
+=> Documentation improvements have been made.

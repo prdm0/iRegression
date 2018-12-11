@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Summarizing Centre Method Fits — summary.cm • iRegression</title>
+<title>Summarizing Centre Method Fits — summary.icm • iRegression</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Summarizing Centre Method Fits — summary.cm" />
+<meta property="og:title" content="Summarizing Centre Method Fits — summary.icm" />
 
-<meta property="og:description" content="summary method for class cm." />
+<meta property="og:description" content="summary method for class icm." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -106,11 +106,11 @@
 
     <div class="ref-description">
     
-    <p><code>summary</code> method for class <code><a href='cm.html'>cm</a></code>.</p>
+    <p><code>summary</code> method for class <code><a href='cm.html'>icm</a></code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for cm</span>
+    <pre class="usage"><span class='co'># S3 method for icm</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>object</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -118,7 +118,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>object</th>
-      <td><p>an object of class "<code>cm</code>", usually, a result of a call to <code><a href='cm.html'>cm</a></code>.</p></td>
+      <td><p>an object of class "<code>icm</code>", usually, a result of a call to <code><a href='cm.html'>icm</a></code>.</p></td>
     </tr>
     <tr>
       <th>&#8230;</th>
@@ -128,7 +128,7 @@
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The function <code>summary.cm</code> returns the following elements, given an object of the class "<code>cm</code>",</p>
+    <p>The function <code>summary.icm</code> returns the following elements, given an object of the class "<code>icm</code>",</p>
 <dt>coefficients</dt><dd><p>a named vector of coefficients.</p></dd>
 	<dt>RMSE.l</dt><dd><p>root mean square error for the lower interval bound.</p></dd>
 	<dt>RMSE.u</dt><dd><p>root mean square error for the upper interval bound.</p></dd>
@@ -145,16 +145,16 @@ symbolic interval data. Computational Statistics and Data Analysis, <b>52</b>, 1
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='cm.html'>cm</a></code></p></div>
+    <div class='dont-index'><p><code><a href='cm.html'>icm</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>##-- Continuing the  cm() example:</span>
+    <pre class="examples"><div class='input'><span class='co'>##-- Continuing the  icm() example:</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='st'>"Cardiological.MinMax"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"iRegression"</span>)
-<span class='no'>ex.cm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='cm.html'>cm</a></span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
-<span class='no'>ex.sum</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>ex.cm</span>)
+<span class='no'>ex.icm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='cm.html'>icm</a></span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
+<span class='no'>ex.sum</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>ex.icm</span>)
 <span class='no'>ex.sum</span></div><div class='output co'>#&gt; Call:
-#&gt; cm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
+#&gt; icm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
 #&gt;     SystMax + DiastMax, data = Cardiological.MinMax)
 #&gt; 
 #&gt;        Estimate     StdErr
