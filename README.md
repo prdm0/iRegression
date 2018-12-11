@@ -1,4 +1,6 @@
-# iRegression
+
+iRegression <img src="https://raw.githubusercontent.com/prdm0/tempfiles/master/logo_iRegression.png" align="right" alt="" width="150" />
+=======================================================
 
 **(Regression Methods for Interval-Valued Variables)**
 
