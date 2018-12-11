@@ -8,13 +8,14 @@ iRegression <img src="https://raw.githubusercontent.com/prdm0/tempfiles/master/l
 [![license](https://img.shields.io/cran/l/devtools.svg)](https://www.gnu.org/licenses/gpl-2.0)
 [![total](http://cranlogs.r-pkg.org/badges/grand-total/iRegression)](https://CRAN.R-project.org/package=iRegression)
 [![month](https://cranlogs.r-pkg.org/badges/iRegression)](https://CRAN.R-project.org/package=iRegression)
+<br><br><br>
+In real problems, it is usual to have the available data presented as intervals. Currently, it is possible to find a wide literature about statistical methods for analyzing interval data. Therefore, different approaches have been proposed to obtain a regression model for this type of data. Some of these methods study the problem itself from an optimization point of view while other regression methods take into account a probabilistic background for the dependent variable. This is R package that contains functions to estimate regression models for interval-valued variables. Particularly, it is presented a generalized linear model for interval-valued variables that includes, as special cases, some regression models for interval variables. The package also provides functions to obtain the fitted values and residuals for the estimated models as well as goodness-of-fit measures and examples of real interval data sets. <br><br><br>
 
-Contains some important regression methods for interval-valued variables. For each method, it is available the fitted values, residuals and some goodness-of-fit measures. <br><br><br>
 
 ### Installation
 
 `install.packages("iRegression")` <br><br><br>
 
-**A package manual may be found at**: https://cran.r-project.org/web/packages/iRegression/iRegression.pdf. The versions of the **iRegression** package are separated by tags.
+**CRAN Project**: https://CRAN.R-project.org/package=iRegression. <br><br>
+**Documentation**: https://prdm0.github.io/iRegression/.
 
-**CRAN Project**: https://CRAN.R-project.org/package=iRegression.

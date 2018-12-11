@@ -18,7 +18,7 @@ print.cm <- function(x, ...)
   cat("Call:\n")
   print(x$call)
   cat("\n")
-  names(x$coefficients) <- c("(Intercept)", paste0("beta_", 1:(length(ex.cm$coefficients) - 1)))
+  names(x$coefficients) <- c("(Intercept)", paste0("beta_", 1:(length(x$coefficients) - 1)))
   print(list(coefficients = x$coefficients,
              sigma = x$sigma, df = x$df))
 }
