@@ -1,6 +1,6 @@
 
-iRegression <img src="https://raw.githubusercontent.com/prdm0/tempfiles/master/logo_iRegression.png" align="right" alt="" width="150" />
-=======================================================
+iRegression <img src="https://raw.githubusercontent.com/prdm0/tempfiles/master/logo_iRegession.png" align="right" alt="" width="120" />
+=======================================================================================================================================
 **(Regression Methods for Interval-Valued Variables)**
 
 [![last](https://www.r-pkg.org/badges/last-release/iRegression)](https://CRAN.R-project.org/package=iRegression)
