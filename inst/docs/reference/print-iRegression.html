@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Extract Centre Method Residuals — residuals.cm • iRegression</title>
+<title>Print Values for various iRegression methods — print-iRegression • iRegression</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Extract Centre Method Residuals — residuals.cm" />
+<meta property="og:title" content="Print Values for various iRegression methods — print-iRegression" />
 
-<meta property="og:description" content="Returns the residuals from an object class cm." />
+<meta property="og:description" content="print prints its argument." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,40 +99,62 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract Centre Method Residuals</h1>
+    <h1>Print Values for various iRegression methods</h1>
     
-    <div class="hidden name"><code>residuals.cm.Rd</code></div>
+    <div class="hidden name"><code>print-iRegression.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Returns the residuals from an object class <code>cm</code>.</p>
+    <p><code>print</code> prints its argument.</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for cm</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/residuals'>residuals</a></span>(<span class='no'>object</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='co'># S3 method for icm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for crm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for ccrm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for MinMax</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for bivar</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for summary.icm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for summary.crm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for summary.ccrm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for summary.MinMax</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for summary.bivar</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for coef.crm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for coef.ccrm</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for coef.MinMax</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='co'># S3 method for coef.bivar</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>object</th>
-      <td><p>an object class <code>cm</code>.</p></td>
+      <th>x</th>
+      <td><p>an object used to select a method..</p></td>
     </tr>
     <tr>
       <th>&#8230;</th>
-      <td><p>other arguments.</p></td>
+      <td><p>further arguments passed to or from other methods.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Residuals extracted from the object class <code>cm</code>.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='cm.html'>cm</a></code></p></div>
+    <div class='dont-index'><p><code><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></code></p></div>
     
 
   </div>
@@ -141,8 +163,6 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
-
       <li><a href="#see-also">See also</a></li>
           </ul>
 

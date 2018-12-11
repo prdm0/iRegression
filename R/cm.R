@@ -1,6 +1,6 @@
-cm <- function (formula1,formula2, data, ...) UseMethod("cm")
+icm <- function (formula1,formula2, data, ...) UseMethod("icm")
 
-cm.default <- function (formula1, formula2, data, ...)
+icm.default <- function (formula1, formula2, data, ...)
 {
   variables1 <- all.vars(formula1) # character vector containing all the names.
   variables2 <- all.vars(formula2) # character vector containing all the names.
@@ -9,11 +9,11 @@ cm.default <- function (formula1, formula2, data, ...)
   est_cpp <- cmEst_cpp(variables1, variables2, data)
   
   est_cpp$call <- match.call()
-  class(est_cpp) <- "cm"
+  class(est_cpp) <- "icm"
   return(est_cpp)
 }
 
-print.cm <- function(x, ...)
+print.icm <- function(x, ...)
 {
   cat("Call:\n")
   print(x$call)
@@ -23,7 +23,7 @@ print.cm <- function(x, ...)
              sigma = x$sigma, df = x$df))
 }
 
-summary.cm <- function(object, ...)
+summary.icm <- function(object, ...)
 {
   rmse.l <- sqrt(mean(object$residuals.l^2))
   rmse.u <- sqrt(mean(object$residuals.u^2))
@@ -35,11 +35,11 @@ summary.cm <- function(object, ...)
               coefficients=TAB,
               RMSE.l = rmse.l,
               RMSE.u = rmse.u)
-  class(res) <- "summary.cm"
+  class(res) <- "summary.icm"
   res
 }
 
-print.summary.cm <- function(x, ...)
+print.summary.icm <- function(x, ...)
 {
   cat("Call:\n")
   print(x$call)
@@ -53,28 +53,28 @@ print.summary.cm <- function(x, ...)
   print(x$RMSE.u)
 }
 
-fitted.cm <- function(object, ...)
+fitted.icm <- function(object, ...)
 {
   fit.Min <- object$fitted.values.l
   fit.Max <- object$fitted.values.u
   ftd <- cbind(fit.Min,
                fit.Max)
   fitted <- round(ftd, digits=3)
-  class(fitted) <- "fitted.cm"
+  class(fitted) <- "fitted.icm"
   fitted
 }
 
-residuals.cm <- function (object, ...)
+residuals.icm <- function (object, ...)
 {
   resid.Min <- object$residuals.l	
   resid.Max <- object$residuals.u
   resi <- cbind(resid.Min,resid.Max)
   resi <- round(resi,digits=3)
-  class(resi) <- "residuals.cm"
+  class(resi) <- "residuals.icm"
   resi
 }
 
-cm.formula <- function(formula1,formula2,data=list(),...)
+icm.formula <- function(formula1,formula2,data=list(),...)
 {
   mf1 <- model.frame(formula=formula1,data=data)
   x1 <- model.matrix(attr(mf1, "terms"), data=mf1)
@@ -82,7 +82,7 @@ cm.formula <- function(formula1,formula2,data=list(),...)
   mf2 <- model.frame(formula=formula2,data=data)
   x2 <- model.matrix(attr(mf2, "terms"), data=mf2)
   y2 <- model.response(mf2)
-  est <- cm.default(formula1, formula2, data,...)
+  est <- icm.default(formula1, formula2, data,...)
   est$call <- match.call()
   est$formula1 <- formula1
   est$formula2 <- formula2

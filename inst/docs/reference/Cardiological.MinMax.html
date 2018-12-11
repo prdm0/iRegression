@@ -141,15 +141,15 @@ Federation of Classification Societies</em>, Springer-Verlag, pp. 369-374.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='cm.html'>cm</a></code>, <code><a href='MinMax.html'>MinMax</a></code></p></div>
+    <div class='dont-index'><p><code><a href='cm.html'>icm</a></code>, <code><a href='MinMax.html'>MinMax</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='st'>"Cardiological.MinMax"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"iRegression"</span>)
 
-<span class='no'>cm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='cm.html'>cm</a></span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
+<span class='no'>cm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='cm.html'>icm</a></span>(<span class='no'>PulseMin</span>~<span class='no'>SystMin</span>+<span class='no'>DiastMin</span>,<span class='no'>PulseMax</span>~<span class='no'>SystMax</span>+<span class='no'>DiastMax</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>Cardiological.MinMax</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>cm1</span>)</div><div class='output co'>#&gt; Call:
-#&gt; cm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
+#&gt; icm.formula(formula1 = PulseMin ~ SystMin + DiastMin, formula2 = PulseMax ~ 
 #&gt;     SystMax + DiastMax, data = Cardiological.MinMax)
 #&gt; 
 #&gt;        Estimate     StdErr

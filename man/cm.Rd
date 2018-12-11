@@ -1,11 +1,11 @@
-\name{cm}
-\alias{cm}
-\alias{cm.default}
-\alias{cm.formula}
+\name{icm}
+\alias{icm}
+\alias{icm.default}
+\alias{icm.formula}
 \title{Centre Method}
-\description{\code{cm} is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000).}
+\description{\code{icm} is used to fit a linear regression model to symbolic interval-valued variables based on the centre method (Billard and Diday, 2000).}
 \usage{
-cm(formula1, formula2, data, ...)
+icm(formula1, formula2, data, ...)
 }
 \arguments{
   \item{formula1}{ an object of class \code{\link{formula}}: a symbolic description of the model to be fitted. }
@@ -26,7 +26,7 @@ from the lower and upper bounds of the independent variable using the same
 vector of parameters \strong{\eqn{latex}{\beta}}.
 }
 \value{
-	\code{cm} returns an object of class "\code{cm}" including at least the following elements:
+	\code{icm} returns an object of class "\code{icm}" including at least the following elements:
 	\item{coefficients}{ a named vector of coefficients. }
 	\item{sigma}{ an estimate of standard deviation.}
 	\item{df}{ the residual degrees of freedom. }
@@ -52,12 +52,12 @@ symbolic interval data. \emph{Computational Statistics and Data Analysis}, \bold
 of the symbolic interval-valued variables.
 }
 \seealso{
-\code{\link{summary.cm}}, \code{\link{coef}}, \code{\link{fitted.cm}}, \code{\link{residuals.cm}}, \code{\link{formula}}
+\code{\link{summary.icm}}, \code{\link{coef}}, \code{\link{fitted.icm}}, \code{\link{residuals.icm}}, \code{\link{formula}}
 }
 \examples{
 data("Cardiological.MinMax", package = "iRegression") ## see Billard and Diday (2000)
-ex.cm <- cm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
-ex.cm
+ex.icm <- icm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
+ex.icm
 
 }
-\keyword{cm}
+\keyword{icm}

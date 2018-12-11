@@ -35,12 +35,12 @@ Federation of Classification Societies}, Springer-Verlag, pp. 369-374.
 
 }
 
-\seealso{\code{\link{cm}}, \code{\link{MinMax}}}
+\seealso{\code{\link{icm}}, \code{\link{MinMax}}}
 
 \examples{
 data("Cardiological.MinMax", package = "iRegression")
 
-cm1 <- cm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
+cm1 <- icm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
 summary(cm1)
 
 ##

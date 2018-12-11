@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Extract Centre Method Fitted Values — fitted.cm • iRegression</title>
+<title>Regression methods for interval-valued variables — iRegression-package • iRegression</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,12 @@
 
 
 
-<meta property="og:title" content="Extract Centre Method Fitted Values — fitted.cm" />
+<meta property="og:title" content="Regression methods for interval-valued variables — iRegression-package" />
 
-<meta property="og:description" content="Returns the fitted values from an object class cm." />
+<meta property="og:description" content="" />
+
+<meta property="og:description" content="This package contains some important regression methods for interval-valued variables.
+For each method, it is available the fitted values, residuals and some goodness-of-fit measures." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,53 +102,66 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract Centre Method Fitted Values</h1>
+    <h1>Regression methods for interval-valued variables</h1>
     
-    <div class="hidden name"><code>fitted.cm.Rd</code></div>
+    <div class="hidden name"><code>iRegression-package.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Returns the fitted values from an object class <code>cm</code>.</p>
+    
+
+    <p>This package contains some important regression methods for interval-valued variables.
+For each method, it is available the fitted values, residuals and some goodness-of-fit measures.</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for cm</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/fitted.values'>fitted</a></span>(<span class='no'>object</span>, <span class='no'>...</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>object</th>
-      <td><p>an object class <code>cm</code>.</p></td>
-    </tr>
-    <tr>
-      <th>&#8230;</th>
-      <td><p>other arguments.</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+        
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Fitted values extracted from an object class <code>cm</code>.</p>
+    <table class='table'>
+<tr><td></td><td>Package:</td></tr>
+<tr><td>iRegression</td><td></td></tr>
+<tr><td>Type:</td><td>Package</td></tr>
+<tr><td></td><td>Version:</td></tr>
+<tr><td>1.1</td><td></td></tr>
+<tr><td>Date:</td><td>2011-06-01</td></tr>
+<tr><td></td><td>License:</td></tr>
+<tr><td>GPL (&gt;= 2)</td><td></td></tr>
+<tr><td>LazyLoad:</td><td>yes</td></tr>
+<tr><td></td><td></td></tr>
+</table>
+    <p>Some available functions: 
+<code><a href='https://www.rdocumentation.org/packages/grDevices/topics/cm'>cm</a></code>, <code><a href='MinMax.html'>MinMax</a></code>, <code><a href='crm.html'>crm</a></code>, <code><a href='ccrm.html'>ccrm</a></code>, <code><a href='bivar.html'>bivar</a></code></p>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <div class='dont-index'><p><code><a href='cm.html'>cm</a></code></p></div>
+    
+    <p>Billard, L. and Diday, E. (2000) Regression analysis for interval-valued data. <em>Data Analysis, Classification
+and Related Methods: Proceedings of the Seventh Conference of the International
+Federation of Classification Societies</em>, Springer-Verlag, pp. 369-374.</p>
+<p>Lima Neto, E.A. and De Carvalho, F.A.T. (2008). Centre and range method to fitting a linear regression model on
+symbolic interval data. <em>Computational Statistics and Data Analysis</em>, <b>52</b>, 1500--1515.</p>
+<p>Lima Neto, E.A. and De Carvalho, F.A.T. (2010). Constrained linear regression models for
+symbolic interval-valued variables. <em>Computational Statistics and Data Analysis</em>, 54, 333--347.</p>
+<p>Lima Neto, E. A., Cordeiro, G. and De Carvalho, F.A.T. (2011). Bivariate symbolic regression models for 
+interval-valued variables. <em>Journal of Statistical Computation and Simulation (Print)</em>, 81, 1727--1744.</p>
     
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
 
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#references">References</a></li>
           </ul>
 
+    <h2>Author</h2>
+    <p>Eufrasio de A. Lima Neto <a href='mailto:eufrasio@de.ufpb.br'>eufrasio@de.ufpb.br</a> and Claudio A. V. de Souza Filho <a href='mailto:cldsza@gmail.com'>cldsza@gmail.com</a></p>
+<p>Maintainer: Eufrasio de A. Lima Neto <a href='mailto:eufrasio@de.ufpb.br'>eufrasio@de.ufpb.br</a></p>
+<p>Acknowledgments: The authors would like to thank CNPq (Brazilian Agency) for their financial support.</p>
   </div>
 </div>
 

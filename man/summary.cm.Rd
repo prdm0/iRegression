@@ -1,16 +1,16 @@
-\name{summary.cm}
-\alias{summary.cm}
+\name{summary.icm}
+\alias{summary.icm}
 \title{Summarizing Centre Method Fits}
-\description{ \code{summary} method for class \code{\link{cm}}.}
+\description{ \code{summary} method for class \code{\link{icm}}.}
 \usage{
-\method{summary}{cm}(object, ...)
+\method{summary}{icm}(object, ...)
 }
 \arguments{
-	\item{object}{ an object of class "\code{cm}", usually, a result of a call to \code{\link{cm}}.}
+	\item{object}{ an object of class "\code{icm}", usually, a result of a call to \code{\link{icm}}.}
 	\item{\dots}{ other arguments. }
 }
 \value{
-	The function \code{summary.cm} returns the following elements, given an object of the class "\code{cm}",
+	The function \code{summary.icm} returns the following elements, given an object of the class "\code{icm}",
 	\item{coefficients}{ a named vector of coefficients. }
 	\item{RMSE.l}{ root mean square error for the lower interval bound. }
 	\item{RMSE.u}{ root mean square error for the upper interval bound. }
@@ -27,14 +27,14 @@ symbolic interval data. Computational Statistics and Data Analysis, \bold{52}, 1
 }
 
 \seealso{
-\code{\link{cm}}
+\code{\link{icm}}
 }
 
 \examples{
-##-- Continuing the  cm() example:
+##-- Continuing the  icm() example:
 data("Cardiological.MinMax", package = "iRegression")
-ex.cm <- cm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
-ex.sum <- summary(ex.cm)
+ex.icm <- icm(PulseMin~SystMin+DiastMin,PulseMax~SystMax+DiastMax,data=Cardiological.MinMax)
+ex.sum <- summary(ex.icm)
 ex.sum
 }
-\keyword{summary} \keyword{cm}
+\keyword{summary} \keyword{icm}

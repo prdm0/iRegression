@@ -1,10 +1,10 @@
 \name{print-iRegression}
-\alias{print.cm}
+\alias{print.icm}
 \alias{print.crm}
 \alias{print.ccrm}
 \alias{print.MinMax}
 \alias{print.bivar}
-\alias{print.summary.cm}
+\alias{print.summary.icm}
 \alias{print.summary.crm}
 \alias{print.summary.ccrm}
 \alias{print.summary.MinMax}
@@ -16,12 +16,12 @@
 \title{Print Values for various iRegression methods}
 \description{\code{print} prints its argument. }
 \usage{
-\method{print}{cm}(x, ...)
+\method{print}{icm}(x, ...)
 \method{print}{crm}(x, ...)
 \method{print}{ccrm}(x, ...)
 \method{print}{MinMax}(x, ...)
 \method{print}{bivar}(x, ...)
-\method{print}{summary.cm}(x, ...)
+\method{print}{summary.icm}(x, ...)
 \method{print}{summary.crm}(x, ...)
 \method{print}{summary.ccrm}(x, ...)
 \method{print}{summary.MinMax}(x, ...)
