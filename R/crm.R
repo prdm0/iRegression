@@ -54,9 +54,7 @@ print.crm <- function(x, ...)
     cat("\n")
     print(list(coefficients.C = x$coefficients.C, coefficients.R = x$coefficients.R,
 	   sigma.C = x$sigma.C, sigma.R = x$sigma.R,
-	   df.C = x$df.C, df.R = x$df.R,
-	   fitted.values.l = x$fitted.values.l, fitted.values.u = x$fitted.values.u,
-	   residuals.l = x$residuals.l, residuals.u = x$residuals.u))
+	   df.C = x$df.C, df.R = x$df.R))
 }
 
 summary.crm <- function(object, ...)
