@@ -64,9 +64,8 @@ print.ccrm <- function(x, ...)
     cat("Call:\n")
     print(x$call)
     cat("\n")
-    names(x$coefficients.C)[-1] <- seq(1,length(names(x$coefficients.C)[-1]))
-    names(x$coefficients.R) <- seq(0,length(x$coefficients.R)-1[])
-    names(x$coefficients.R)[1] <- "(Intercept)"
+    names(x$coefficients.C) <- c("(Intercept)", names(x$coefficients.C)[-1])
+    names(x$coefficients.R) <- c("(Intercept)", names(x$coefficients.R)[-1])
     print(list(coefficients.C = x$coefficients.C, coefficients.R = x$coefficients.R,
 	   sigma.C = x$sigma.C, sigma.R = x$sigma.R,
 	   df.C = x$df.C, df.R = x$df.R,
