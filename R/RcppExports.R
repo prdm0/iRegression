@@ -5,7 +5,7 @@ cmEst_cpp <- function(string_formula1, string_formula2, data) {
     .Call(`_iRegression_cmEst_cpp`, string_formula1, string_formula2, data)
 }
 
-modm <- function(xmin, xup, ymin, yup) {
-    .Call(`_iRegression_modm`, xmin, xup, ymin, yup)
+modmEst_cpp <- function(xmin, xup, ymin, yup) {
+    .Call(`_iRegression_modmEst_cpp`, xmin, xup, ymin, yup)
 }
 
