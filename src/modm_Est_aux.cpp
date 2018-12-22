@@ -14,7 +14,23 @@ using namespace Rcpp;
 // [[Rcpp::depends(RcppArmadillo)]]
 
 // [[Rcpp::export]]
-List modmEst_cpp(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
+List modmEst_cpp(StringVector variables1, StringVector variables2, DataFrame data) {
+  
+  //int size_string_formula1 = variables1.size();
+  //int size_string_formula2 = variables2.size();
+  
+  String a = variables1[0];
+  String b = variables2[0];
+  
+  arma::vec ymin = data[a];
+  arma::vec yup = data[b];
+  
+  String c = variables1[1];
+  String d = variables2[1];
+  
+  arma::vec xmin = data[c];
+  arma::vec xup = data[d];
+  
   arma::vec x_range = (xup - xmin)/2.;
   arma::vec y_range = (yup - ymin)/2.;
 
@@ -39,8 +55,8 @@ List modmEst_cpp(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup) {
   arma::vec Ymin_est = alpha * x_center + beta * x_range - (gamma - delta);
   arma::vec Ymax_est = alpha * x_center + beta * x_range + (gamma - delta);
 
-  return List::create(_["Ymin_est"] = Ymin_est.t(),
-                      _["Ymax_est"] = Ymax_est.t(),
+  return List::create(_["Ymin_est"] = as<std::vector<double>>(wrap(Ymin_est.t())),
+                      _["Ymax_est"] = as<std::vector<double>>(wrap(Ymax_est.t())),
                       _["alpha"] = alpha,
                       _["beta"] = beta,
                       _["Bmin"] = Bmin,

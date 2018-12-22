@@ -20,26 +20,22 @@ BEGIN_RCPP
 END_RCPP
 }
 // modmEst_cpp
-List modmEst_cpp(arma::vec xmin, arma::vec xup, arma::vec ymin, arma::vec yup);
-RcppExport SEXP _iRegression_modmEst_cpp(SEXP xminSEXP, SEXP xupSEXP, SEXP yminSEXP, SEXP yupSEXP) {
+List modmEst_cpp(StringVector variables1, StringVector variables2, DataFrame data);
+RcppExport SEXP _iRegression_modmEst_cpp(SEXP variables1SEXP, SEXP variables2SEXP, SEXP dataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::vec >::type xmin(xminSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type xup(xupSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type ymin(yminSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type yup(yupSEXP);
-    rcpp_result_gen = Rcpp::wrap(modmEst_cpp(xmin, xup, ymin, yup));
+    Rcpp::traits::input_parameter< StringVector >::type variables1(variables1SEXP);
+    Rcpp::traits::input_parameter< StringVector >::type variables2(variables2SEXP);
+    Rcpp::traits::input_parameter< DataFrame >::type data(dataSEXP);
+    rcpp_result_gen = Rcpp::wrap(modmEst_cpp(variables1, variables2, data));
     return rcpp_result_gen;
 END_RCPP
 }
 
-RcppExport SEXP _iRegression_modm(SEXP, SEXP, SEXP, SEXP);
-
 static const R_CallMethodDef CallEntries[] = {
     {"_iRegression_cmEst_cpp", (DL_FUNC) &_iRegression_cmEst_cpp, 3},
-    {"_iRegression_modmEst_cpp", (DL_FUNC) &_iRegression_modmEst_cpp, 4},
-    {"_iRegression_modm",      (DL_FUNC) &_iRegression_modm,      4},
+    {"_iRegression_modmEst_cpp", (DL_FUNC) &_iRegression_modmEst_cpp, 3},
     {NULL, NULL, 0}
 };
 

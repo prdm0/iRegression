@@ -1,4 +1,4 @@
-icm <- function (formula1,formula2, data, ...) UseMethod("icm")
+icm <- function (formula1, formula2, data, ...) UseMethod("icm")
 
 icm.default <- function (formula1, formula2, data, ...)
 {
@@ -8,7 +8,10 @@ icm.default <- function (formula1, formula2, data, ...)
   # cmEst_cpp is a function written in C++ using RcppArmadillo.
   est_cpp <- cmEst_cpp(variables1, variables2, data)
   
+  est_cpp$formula1 <- formula1
+  est_cpp$formula2 <- formula2
   est_cpp$call <- match.call()
+  
   class(est_cpp) <- "icm"
   return(est_cpp)
 }
@@ -75,19 +78,4 @@ residuals.icm <- function (object, ...)
   resi <- round(resi,digits=3)
   class(resi) <- "residuals.icm"
   resi
-}
-
-icm.formula <- function(formula1,formula2,data=list(),...)
-{
-  mf1 <- model.frame(formula=formula1,data=data)
-  x1 <- model.matrix(attr(mf1, "terms"), data=mf1)
-  y1 <- model.response(mf1)
-  mf2 <- model.frame(formula=formula2,data=data)
-  x2 <- model.matrix(attr(mf2, "terms"), data=mf2)
-  y2 <- model.response(mf2)
-  est <- icm.default(formula1, formula2, data,...)
-  est$call <- match.call()
-  est$formula1 <- formula1
-  est$formula2 <- formula2
-  est
 }

@@ -4,7 +4,7 @@
 \alias{modm}
 \title{Model M}
 \usage{
-modm(formula1, formula2, data, ...)
+modm(formula_min, formula_max, data, ...)
 }
 \arguments{
 \item{formula_min}{formula com o minimo.}
@@ -31,11 +31,18 @@ Descrevendo o pacote.
 \details{
 Algum detalhe do modelo e/ou uso da funcao.
 }
+\examples{
+data("Cardiological.MinMax", package = "iRegression") ## see Billard and Diday (2000)
+formula_min = PulseMin ~ SystMin
+formula_max = PulseMax ~ SystMax
+result_modm <- modm(formula_min = formula_min, formula_max = formula_max, data = Cardiological.MinMax)
+result_modm
+}
 \references{
 Alguma referencia do Modelo M.
 }
 \seealso{
-\code{\link{cm}}, \code{\link{ccrm}} and \code{\link{MinMax}}.
+\code{\link{icm}}, \code{\link{ccrm}} and \code{\link{MinMax}}.
 }
 \author{
 Pedro Rafael D. Marinho and Eufrasio de Andrade Lima Neto.
