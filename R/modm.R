@@ -25,7 +25,7 @@
 #' formula_max = PulseMax ~ SystMax
 #' result_modm <- modm(formula_min = formula_min, formula_max = formula_max, data = Cardiological.MinMax)
 #' result_modm
-#' @method mo myclass
+
 modm <- function(formula_min, formula_max, data, ...) UseMethod("modm")
 
 modm.default <- function(formula_min, formula_max, data, ...){
