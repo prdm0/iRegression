@@ -109,7 +109,7 @@ bivar.default <- function (formula1, lig1, formula2, lig2, data, ...) {
 
 			###############Atualiza Rho ##################
 
-			for (i in 1:length(ro.seq)) {
+			for (i in seq_along(ro.seq)) {
 
 				log.ver.rho.theta = (y1*q(mi1,mi2,ro.seq[i])+y2*q(mi2,mi1,ro.seq[i]) - 
 					b((q(mi1,mi2,ro.seq[i])),(q(mi2,mi1,ro.seq[i])),ro.seq[i]))

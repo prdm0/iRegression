@@ -4,7 +4,7 @@
 \alias{modm}
 \title{Model M}
 \usage{
-modm(formula_min, formula_max, data, ...)
+\method{mo}{myclass}(formula_min, formula_max, data, ...)
 }
 \arguments{
 \item{formula_min}{formula com o minimo.}
