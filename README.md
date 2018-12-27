@@ -14,9 +14,9 @@ In real problems, it is usual to have the available data presented as intervals.
 
 ### Installation
 
-**By The Comprehensive R Archive Network - CRAN**: `install.packages("iRegression")` 
+**by The Comprehensive R Archive Network - CRAN**: `install.packages("iRegression")` 
 
-**By GitHub**: `devtools::install_github("prdm0/iRegression", ref =  "v1.2")` <br><br>
+**by GitHub**: `devtools::install_github("prdm0/iRegression", ref =  "v1.2")` <br><br>
 
 **CRAN Project**: https://CRAN.R-project.org/package=iRegression. <br><br>
 **Site with example and documentation**: https://prdm0.github.io/iRegression/.
