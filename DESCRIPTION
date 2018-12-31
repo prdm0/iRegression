@@ -21,7 +21,7 @@ Suggest:
          devtools,
          knitr
 Roxygen: list(markdown = TRUE)
-URL: https://prdm0.github.io/iRegression/, https://github.com/prdm0/iRegression
+URL: (Book Site) https://prdm0.github.io/iRegression/, (GitHub Project) https://github.com/prdm0/iRegression
 BugReports: https://github.com/prdm0/iRegression/issues
 Imports: Rcpp, mgcv
 LinkingTo: Rcpp, RcppArmadillo
