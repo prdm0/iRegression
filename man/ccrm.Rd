@@ -41,7 +41,7 @@ Lima Neto, E.A. and De Carvalho, F.A.T. (2010). Constrained linear regression mo
 symbolic interval-valued variables. \emph{Computational Statistics and Data Analysis}, 54, 333--347.
 
 }
-\author{ Eufrasio de A. Lima Neto \email{eufrasio@de.ufpb.br} , Claudio A. V. de Souza Filho \email{cldsza@gmail.com}  }
+\author{Eufrasio de A. Lima Neto \email{eufrasio@de.ufpb.br}, Pedro Rafael D. Marinho \email{pedro.rafael.marinho@gmail.com} and Claudio A. V. de Souza Filho.}
 
 \note{
 

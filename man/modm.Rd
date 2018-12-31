@@ -45,5 +45,4 @@ Alguma referencia do Modelo M.
 \code{\link{icm}}, \code{\link{ccrm}} and \code{\link{MinMax}}.
 }
 \author{
-Pedro Rafael D. Marinho and Eufrasio de Andrade Lima Neto.
-}
+Pedro Rafael D. Marinho \email{pedro.rafael.marinho@gmail.com} and Eufrasio de Andrade Lima Neto \email{eufrasio@de.ufpb.br}.}
