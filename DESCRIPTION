@@ -13,7 +13,7 @@ Maintainer: Eufrasio de A. Lima Neto <eufrasio@de.ufpb.br> and Pedro Rafael D. M
 Description: This package contains some important regression methods
         for interval-valued variables. For each method, it is available
         the fitted values, residuals and some goodness-of-fit measures.
-License: GPL-2 | GPL-3
+License: GPL-3
 Depends: R (>= 3.0.0)
 Suggest: 
          roxygen2,
