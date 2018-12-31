@@ -3,8 +3,8 @@ Type: Package
 Title: Regression methods for interval-valued variables
 Version: 2.0
 Date: 2011-06-01
-Authors@R: c(person(given = "Eufrasio", family = "de Andrade Lima Neto", role = "aut", email = "eufrasio@de.ufpb.br"),
-             person(given = "Pedro Rafael", family = "Diniz Marinho", role = "cre", email = "pedro.rafael.marinho@gmail.com"),
+Authors@R: c(person(given = "Eufrasio", family = "de Andrade Lima Neto", role = "[aut, cre]", email = "eufrasio@de.ufpb.br"),
+             person(given = "Pedro Rafael", family = "Diniz Marinho", role = "[aut, cre]", email = "pedro.rafael.marinho@gmail.com"),
              person(given = "Claudio", family = "A. V. Souza", role = "ctb", email = ""))
 Author: Eufrasio de A. Lima Neto [aut, cre],
   Pedro Rafael D. Marinho [aut, cre],
